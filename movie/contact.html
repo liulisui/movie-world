@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 电影世界</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>电影世界</h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="contact.html" class="active">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button id="theme-toggle" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-menu">
+                    <a href="login.html" class="btn btn-primary">登录</a>
+                    <a href="register.html" class="btn">注册</a>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="page-header">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>有任何问题或建议？请随时与我们联系</p>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h2>发送消息</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                            </div>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="您的邮箱地址" required>
+                            </div>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">主题</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-tag"></i>
+                                <input type="text" id="subject" name="subject" placeholder="消息主题" required>
+                            </div>
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">消息内容</label>
+                            <textarea id="message" name="message" rows="6" placeholder="请输入您的消息内容..."
+                                required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">发送消息</button>
+                    </form>
+                </div>
+                <div class="contact-info-container">
+                    <h2>联系方式</h2>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>地址</h3>
+                            <p>浙江工业大学屏峰校区</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>电话</h3>
+                            <p>+86 123 4567 8901</p>
+                            <p>周一至周五: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>邮箱</h3>
+                            <p>111@movieworld.com</p>
+                            <p>222@movieworld.com</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map-section">
+        <div class="container">
+            <h2>我们的位置</h2>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=浙江工业大学屏峰&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>如何成为电影世界的会员？</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>进入我们的网站，在注册页面完成注册流程即可成为电影世界的会员。会员可以享受更多专属功能。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>如何查找最新上映的电影？</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>在首页的"新片推荐"区域，您可以找到最新上映的电影信息。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>电影世界提供哪些资讯内容？</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>我们提供最新电影资讯、影评等内容，帮助影迷了解电影行业动态，选择心仪的观影内容。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>如何联系电影世界的客服？</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>您可以通过本页面的发送消息功能、电子邮件或电话与我们的客服团队联系。我们的工作时间是周一至周五9:00-18:00。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <p>电影世界是您了解电影资讯、阅读影评、分享观影体验的理想平台。</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>电影分类</h3>
+                    <ul>
+                        <li><a href="movies.html?category=action">动作</a></li>
+                        <li><a href="movies.html?category=comedy">喜剧</a></li>
+                        <li><a href="movies.html?category=romance">爱情</a></li>
+                        <li><a href="movies.html?category=scifi">科幻</a></li>
+                        <li><a href="movies.html?category=horror">恐怖</a></li>
+                        <li><a href="movies.html?category=animation">动画</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系方式</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> 111@movieworld.com</li>
+                        <li><i class="fas fa-phone"></i> +86 123 4567 8901</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 浙江工业大学屏峰校区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 电影世界 版权所有 | 隐私政策 | 使用条款</p>
+                <div class="social-links">
+                    <a href="#" title="分享到微信" class="social-icon"><i class="fab fa-weixin"></i></a>
+                    <a href="#" title="分享到微博" class="social-icon"><i class="fab fa-weibo"></i></a>
+                    <a href="#" title="分享到QQ" class="social-icon"><i class="fab fa-qq"></i></a>
+                    <a href="#" title="更多分享选项" class="social-icon"><i class="fas fa-share-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

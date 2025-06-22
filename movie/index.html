@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影世界 - 您的电影资讯与评论平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="js/pagination.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>电影世界</h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button id="theme-toggle" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-menu">
+                    <a href="login.html" class="btn btn-primary">登录</a>
+                    <a href="register.html" class="btn">注册</a>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="hero-banner">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <a href="movie-detail.html?id=2">
+                    <img src="images/banner1.png" alt="热门电影1">
+                </a>
+                <div class="carousel-caption">
+                    <h2>激情四射</h2>
+                    <p>这是一部不容错过的动作大片</p>
+                    <a href="movie-detail.html?id=2" class="btn btn-primary">了解更多</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <a href="movie-detail.html?id=5">
+                    <img src="images/banner2.png" alt="热门电影2">
+                </a>
+                <div class="carousel-caption">
+                    <h2>经典重映</h2>
+                    <p>重温经典，感受不一样的观影体验</p>
+                    <a href="movie-detail.html?id=5" class="btn btn-primary">了解更多</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <a href="movie-detail.html?id=1">
+                    <img src="images/banner3.png" alt="热门电影3">
+                </a>
+                <div class="carousel-caption">
+                    <h2>下周预告</h2>
+                    <p>备受期待的科幻巨制即将上映</p>
+                    <a href="movie-detail.html?id=1" class="btn btn-primary">了解更多</a>
+                </div>
+            </div>
+            <button class="carousel-control prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </section>
+    <section class="category-section">
+        <div class="container">
+            <h2 class="section-title">电影分类</h2>
+            <div class="category-grid">
+                <a href="category.html?category=action" class="category-card">
+                    <div class="category-icon"><i class="fas fa-fire"></i></div>
+                    <h3>动作</h3>
+                </a>
+                <a href="category.html?category=comedy" class="category-card">
+                    <div class="category-icon"><i class="fas fa-smile"></i></div>
+                    <h3>喜剧</h3>
+                </a>
+                <a href="category.html?category=romance" class="category-card">
+                    <div class="category-icon"><i class="fas fa-heart"></i></div>
+                    <h3>爱情</h3>
+                </a>
+                <a href="category.html?category=scifi" class="category-card">
+                    <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>科幻</h3>
+                </a>
+                <a href="category.html?category=horror" class="category-card">
+                    <div class="category-icon"><i class="fas fa-ghost"></i></div>
+                    <h3>恐怖</h3>
+                </a>
+                <a href="category.html?category=animation" class="category-card">
+                    <div class="category-icon"><i class="fas fa-child"></i></div>
+                    <h3>动画</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="new-movies" id="new-movies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">新片推荐</h2>
+            </div>
+            <div id="new-movies-container">
+                <div class="movie-page active" data-page="1" style="display: flex;">
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <a href="movie-detail.html?id=1"><img src="images/movie1.png" alt="电影1"></a>
+                            <div class="movie-rating">
+                                <span>9.2</span>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3><a href="movie-detail.html?id=1">流浪地球2</a></h3>
+                            <p class="movie-meta">科幻 | 中国 | 173分钟</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <a href="movie-detail.html?id=2"><img src="images/movie2.png" alt="电影2"></a>
+                            <div class="movie-rating">
+                                <span>8.6</span>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3><a href="movie-detail.html?id=2">霍比特人3：五军之战</a></h3>
+                            <p class="movie-meta">动作 | 美国 | 144分钟</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <a href="movie-detail.html?id=3"><img src="images/movie3.png" alt="电影3"></a>
+                            <div class="movie-rating">
+                                <span>8.9</span>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3><a href="movie-detail.html?id=3">独行月球</a></h3>
+                            <p class="movie-meta">喜剧 | 中国 | 122分钟</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <a href="movie-detail.html?id=4"><img src="images/movie4.png" alt="电影4"></a>
+                            <div class="movie-rating">
+                                <span>8.3</span>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3><a href="movie-detail.html?id=4">爱乐之城</a></h3>
+                            <p class="movie-meta">爱情 | 美国 | 128分钟</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-page" data-page="2" style="display: none;">
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <a href="movie-detail.html?id=5"><img src="images/movie5.png" alt="电影5"></a>
+                            <div class="movie-rating">
+                                <span>9.3</span>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3><a href="movie-detail.html?id=5">狮子王</a></h3>
+                            <p class="movie-meta">动画 | 美国 | 88分钟</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <a href="movie-detail.html?id=6"><img src="images/movie6.png" alt="电影6"></a>
+                            <div class="movie-rating">
+                                <span>7.4</span>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3><a href="movie-detail.html?id=6">死寂</a></h3>
+                            <p class="movie-meta">恐怖 | 美国 | 89分钟</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-pagination">
+                <button class="prev-page" disabled><i class="fas fa-chevron-left"></i></button>
+                <span class="page-indicator"><span class="current-page">1</span> / <span
+                        class="total-pages">2</span></span>
+                <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门影评</h2>
+            </div>
+            <div class="reviews-grid" id="reviews-container">
+                <div class="reviews-page active" data-page="1"
+                    style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); width: 100%;">
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>影评人小张</h4>
+                                <div class="review-meta">
+                                    <span class="review-date">2024-06-15</span>
+                                    <span class="review-movie">《流浪地球2》</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">中国科幻电影的又一次突破</h3>
+                        <p class="review-excerpt">《流浪地球2》在前作的基础上更加成熟，无论是特效还是剧情都有明显提升。影片不仅仅展现了宏大的太空场景，更融入了人性的思考...</p>
+                        <div class="review-full-content" style="display: none;">
+                            <p>《流浪地球2》在前作的基础上更加成熟，无论是特效还是剧情都有明显提升。影片不仅仅展现了宏大的太空场景，更融入了人性的思考。导演郭帆在这部作品中展现出了更为娴熟的叙事能力，角色塑造更加立体，情感冲突更加真实。
+                                特效方面，影片达到了好莱坞大片的水准，太空站、月球基地等场景的呈现令人叹为观止。中国科幻电影通过这部作品再次证明了自己的实力和潜力。
+                                总体而言，《流浪地球2》是一部不可多得的优秀科幻作品，它不仅仅是视觉奇观的呈现，更是对人类命运共同体理念的深刻探讨。</p>
+                        </div>
+                        <button class="read-more-btn">阅读全文</button>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>影评人小王</h4>
+                                <div class="review-meta">
+                                    <span class="review-date">2024-06-10</span>
+                                    <span class="review-movie">《狮子王》</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">经典动画的永恒魅力</h3>
+                        <p class="review-excerpt">迪士尼的《狮子王》是一部不朽的动画经典，它以非洲大草原为背景，讲述了小狮子辛巴成长为狮王的传奇故事，精美的画面和感人的剧情令人难忘...
+                        </p>
+                        <div class="review-full-content" style="display: none;">
+                            <p>迪士尼的《狮子王》是一部不朽的动画经典，它以非洲大草原为背景，讲述了小狮子辛巴成长为狮王的传奇故事。影片通过精美的画面、动人的音乐和感人至深的剧情，塑造了一个关于责任、勇气和成长的故事。
+                                从艺术角度看，《狮子王》的动画技术在当时堪称顶尖，角色造型生动，背景场景壮观。音乐方面，艾尔顿·约翰创作的《Circle of Life》和《Can You Feel the
+                                Love Tonight》等歌曲成为了流行文化的经典。
+                                更重要的是，《狮子王》表达的主题具有普世价值，它告诉观众要勇敢面对困难，承担起自己的责任，这是它能够跨越时代和文化界限，成为真正经典的原因。</p>
+                        </div>
+                        <button class="read-more-btn">阅读全文</button>
+                    </article>
+                </div>
+
+                <div class="reviews-page" data-page="2"
+                    style="display: none; grid-template-columns: 1fr; gap: var(--spacing-md); width: 100%;">
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>影评人小李</h4>
+                                <div class="review-meta">
+                                    <span class="review-date">2024-06-05</span>
+                                    <span class="review-movie">《独行月球》</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">中国科幻喜剧的新尝试</h3>
+                        <p class="review-excerpt">《独行月球》将科幻元素与喜剧巧妙结合，沈腾的表演令人捧腹，在欢笑之余也不乏对人性的思考，影片巧妙平衡了娱乐性和深度...</p>
+                        <div class="review-full-content" style="display: none;">
+                            <p>《独行月球》将科幻元素与喜剧巧妙结合，沈腾饰演的宇航员独自滞留月球的处境本应令人紧张，但他幽默的表演风格让整部电影充满欢笑。影片在保持喜剧节奏的同时，也不乏对孤独、希望与坚持的思考。
+                                电影的视觉效果相当出色，月球基地和地球灾难的场景制作精良。值得称赞的是，影片在笑料之外，还构建了一个合理的科幻世界观，并通过主角的成长展现了面对绝境时人性的光辉。
+                                《独行月球》代表了中国科幻喜剧电影的新尝试，它证明了严肃题材也可以用幽默的方式呈现，并在欢笑中传递积极向上的价值观。</p>
+                        </div>
+                        <button class="read-more-btn">阅读全文</button>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>影评人小陈</h4>
+                                <div class="review-meta">
+                                    <span class="review-date">2024-05-28</span>
+                                    <span class="review-movie">《霍比特人3：五军之战》</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">中土世界史诗的辉煌终章</h3>
+                        <p class="review-excerpt">彼得·杰克逊导演的《霍比特人3：五军之战》以震撼人心的战争场面和精彩的角色故事收官，虽有情节上的缺陷，但仍不失为一部令人难忘的史诗之作...
+                        </p>
+                        <div class="review-full-content" style="display: none;">
+                            <p>彼得·杰克逊导演的《霍比特人3：五军之战》以震撼人心的战争场面和精彩的角色故事为霍比特人三部曲画上了句号。这部电影将托尔金笔下的史诗战争搬上银幕，视觉效果令人叹为观止，尤其是五大军队的对决场面，宏大而精彩。
+                                角色方面，马丁·弗里曼饰演的比尔博·巴金斯展现了霍比特人的勇气与智慧，理查德·阿米蒂奇饰演的索林在龙病的煎熬中最终找回了自我，这些角色弧线都给观众留下了深刻印象。
+                                尽管影片在情节上有些拖沓，某些支线也显得多余，但作为中土世界系列的一部分，《五军之战》仍然成功地延续了前作的魅力，为粉丝们献上了一场视听盛宴，也为新观众提供了一个进入托尔金宏大世界的窗口。
+                            </p>
+                        </div>
+                        <button class="read-more-btn">阅读全文</button>
+                    </article>
+                </div>
+
+                <div class="reviews-page" data-page="3"
+                    style="display: none; grid-template-columns: 1fr; gap: var(--spacing-md); width: 100%;">
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>影评人小赵</h4>
+                                <div class="review-meta">
+                                    <span class="review-date">2024-05-20</span>
+                                    <span class="review-movie">《死寂》</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">恐怖片中的匠心之作</h3>
+                        <p class="review-excerpt">《死寂》不是简单的惊吓片，而是将恐怖氛围融入到精心构建的故事中，电影通过诡异的腹语娃娃和诅咒传说，营造出一种令人不安的恐怖感...</p>
+                        <div class="review-full-content" style="display: none;">
+                            <p>《死寂》不是简单的惊吓片，而是将恐怖氛围融入到精心构建的故事中。导演温子仁凭借其独特的视觉风格，以一个关于腹语表演者的诅咒传说为基础，创造了一部细节丰富、气氛紧张的恐怖电影。
+                                影片通过阴暗的色调、精心设计的场景和巧妙的声音设计，成功营造出一种持续的不安感。腹语娃娃作为恐怖元素的运用十分高明，既恐怖又不落俗套。故事主线清晰，同时又埋下了足够的伏笔，最终的反转既意外又合理。
+                                《死寂》证明了好的恐怖片不仅仅依靠廉价的惊吓，更在于精心的叙事和对氛围的掌控，它将成为恐怖片爱好者值得收藏的作品。</p>
+                        </div>
+                        <button class="read-more-btn">阅读全文</button>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>影评人小孙</h4>
+                                <div class="review-meta">
+                                    <span class="review-date">2024-05-15</span>
+                                    <span class="review-movie">《爱乐之城》</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="review-title">致敬经典的现代歌舞片</h3>
+                        <p class="review-excerpt">《爱乐之城》以其鲜艳的色彩、动人的音乐和精彩的舞蹈重新定义了现代歌舞片，影片既怀旧又创新，既展现了好莱坞歌舞片的传统魅力...</p>
+                        <div class="review-full-content" style="display: none;">
+                            <p>《爱乐之城》以其鲜艳的色彩、动人的音乐和精彩的舞蹈重新定义了现代歌舞片。导演达米恩·查泽雷将对经典好莱坞歌舞片的热爱融入到这部作品中，创造出一种既怀旧又现代的独特风格。
+                                瑞恩·高斯林和艾玛·斯通的表演和化学反应令人惊叹，他们不仅展现了出色的演技，还在歌舞场景中表现得游刃有余。影片的视觉设计富有创意，每一个场景都精心编排，色彩丰富而有层次，特别是开场的高速公路舞蹈场景，令人印象深刻。
+                                最值得一提的是影片对梦想与现实的思考，它不仅仅是一部关于爱情的电影，更是对追求艺术梦想的人们的致敬。结局既甜蜜又苦涩，完美地体现了人生选择的复杂性，让观众在激动之余也有深思。
+                            </p>
+                        </div>
+                        <button class="read-more-btn">阅读全文</button>
+                    </article>
+                </div>
+            </div>
+
+
+            <div class="custom-pagination">
+                <button class="reviews-prev-page" disabled><i class="fas fa-chevron-left"></i></button>
+                <span class="page-indicator"><span class="reviews-current-page">1</span> / <span
+                        class="reviews-total-pages">3</span></span>
+                <button class="reviews-next-page"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="rankings-section">
+        <div class="container">
+            <div class="rankings-content">
+                <h2 class="section-title">本周票房排行</h2>
+                <div class="rankings-list">
+                    <div class="ranking-item">
+                        <span class="ranking-number">1</span>
+                        <div class="ranking-info">
+                            <h3>流浪地球2</h3>
+                            <p>票房：4.5亿</p>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="ranking-number">2</span>
+                        <div class="ranking-info">
+                            <h3>独行月球</h3>
+                            <p>票房：3.2亿</p>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="ranking-number">3</span>
+                        <div class="ranking-info">
+                            <h3>霍比特人3：五军之战</h3>
+                            <p>票房：2.7亿</p>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="ranking-number">4</span>
+                        <div class="ranking-info">
+                            <h3>狮子王</h3>
+                            <p>票房：1.8亿</p>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="ranking-number">5</span>
+                        <div class="ranking-info">
+                            <h3>爱乐之城</h3>
+                            <p>票房：1.5亿</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-office-chart">
+                    <h3 class="chart-title"
+                        style="text-align: center; margin-top: 30px; color: var(--primary-color); font-size: 1.2em;">
+                        票房占比分布图</h3>
+                    <div class="canvas-container" style="position: relative; height: 300px; margin: 20px auto;">
+                        <canvas id="boxOfficeChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-content">
+                <h2>订阅最新电影资讯</h2>
+                <p>第一时间获取最新电影上映信息和独家影评</p>
+                <form id="subscribe-form" class="subscribe-form">
+                    <input type="email" placeholder="输入您的邮箱" required>
+                    <button type="submit" class="btn btn-primary">订阅</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <p>电影世界是您了解电影资讯、阅读影评、分享观影体验的理想平台。</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>电影分类</h3>
+                    <ul>
+                        <li><a href="category.html?category=action">动作</a></li>
+                        <li><a href="category.html?category=comedy">喜剧</a></li>
+                        <li><a href="category.html?category=romance">爱情</a></li>
+                        <li><a href="category.html?category=scifi">科幻</a></li>
+                        <li><a href="category.html?category=horror">恐怖</a></li>
+                        <li><a href="category.html?category=animation">动画</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系方式</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> 111@movieworld.com</li>
+                        <li><i class="fas fa-phone"></i> +86 123 4567 8901</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 浙江工业大学屏峰校区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 电影世界 版权所有 | 隐私政策 | 使用条款 | 技术支持：浙江工业大学不想上早八团队</p>
+                <div class="social-links">
+                    <a href="#" title="分享到微信" class="social-icon"><i class="fab fa-weixin"></i></a>
+                    <a href="#" title="分享到微博" class="social-icon"><i class="fab fa-weibo"></i></a>
+                    <a href="#" title="分享到QQ" class="social-icon"><i class="fab fa-qq"></i></a>
+                    <a href="#" title="更多分享选项" class="social-icon"><i class="fas fa-share-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+
+</html>
